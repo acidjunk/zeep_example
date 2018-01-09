@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Login?xsd=xsd3"
+               namespace="http://schemas.datacontract.org/2004/07/PresentationModel.WcfSession"/>
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Login?xsd=xsd0"
+               namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+    <xs:element name="Login">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="credentials" nillable="true" type="q1:ImsCredentials"
+                            xmlns:q1="http://schemas.datacontract.org/2004/07/PresentationModel.WcfSession"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="LoginResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="LoginResult" type="q2:guid"
+                            xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/"/>
+                <xs:element minOccurs="0" name="credentials" nillable="true" type="q3:ImsCredentials"
+                            xmlns:q3="http://schemas.datacontract.org/2004/07/PresentationModel.WcfSession"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Logout">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="token" type="q4:guid"
+                            xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="LogoutResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="LogoutResult" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetUserName">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="token" type="q5:guid"
+                            xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetUserNameResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="GetUserNameResult" nillable="true" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

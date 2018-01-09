@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="OrdersService" targetNamespace="http://tempuri.org/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+                  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                  xmlns:wsa10="http://www.w3.org/2005/08/addressing"
+                  xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+                  xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+                  xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+                  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://tempuri.org/Imports">
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd0" namespace="http://tempuri.org/"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd1"
+                        namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd2"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.DatabaseFilter"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd3"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.NavigationProperties"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd4"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Orders"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd5"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd6"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.RadioAccessNetwork"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd7"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd8"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.MPLS"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd9"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Circuits"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd10"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Customer"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd11"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Site"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd12"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.DDFODF"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd13"
+                        namespace="http://schemas.datacontract.org/2004/07/System.Drawing"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd14"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.EquipmentDefinition"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd15"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd16"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd17"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Domain"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd18"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.IpManagement"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd19"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Relation"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd20"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.ExtraField"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd21"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.User"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd22"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.History"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd23"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.NetworkMap"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd24"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.NumberManagement"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd25"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.PlannedWork"/>
+            <xsd:import schemaLocation="http://ims.surfnet.nl:8095/Orders?xsd=xsd26"
+                        namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Spof"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="IOrdersService_GetAllOrdersFiltered_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrdersFiltered"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllOrdersFiltered_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrdersFilteredResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderById_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderById"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderById_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderByIdResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderByName_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderByName"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderByName_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderByNameResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrder_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrder"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrder_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrder_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrder"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrder_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrder_InputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrder"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrder_OutputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllOrderLoggingsFiltered_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrderLoggingsFiltered"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllOrderLoggingsFiltered_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrderLoggingsFilteredResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderLoggingById_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderLoggingById"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderLoggingById_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderLoggingByIdResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrderLogging_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrderLogging"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrderLogging_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrderLoggingResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrderLogging_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrderLogging"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrderLogging_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrderLoggingResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrderLogging_InputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrderLogging"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrderLogging_OutputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrderLoggingResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllOrdersRelateFiltered_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrdersRelateFiltered"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllOrdersRelateFiltered_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrdersRelateFilteredResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderRelateById_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderRelateById"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderRelateById_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderRelateByIdResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrderRelate_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrderRelate"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrderRelate_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrderRelateResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrderRelate_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrderRelate"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrderRelate_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrderRelateResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrderRelate_InputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrderRelate"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrderRelate_OutputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrderRelateResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllOrderTasksFiltered_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrderTasksFiltered"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllOrderTasksFiltered_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrderTasksFilteredResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderTaskById_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderTaskById"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderTaskById_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderTaskByIdResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderTaskByName_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderTaskByName"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderTaskByName_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderTaskByNameResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrderTask_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrderTask"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrderTask_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrderTaskResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrderTask_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrderTask"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrderTask_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrderTaskResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrderTask_InputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrderTask"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrderTask_OutputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrderTaskResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllOrderTypesFiltered_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrderTypesFiltered"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllOrderTypesFiltered_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrderTypesFilteredResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderTypeById_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderTypeById"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderTypeById_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderTypeByIdResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderTypeByName_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderTypeByName"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderTypeByName_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderTypeByNameResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrderType_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrderType"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrderType_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrderTypeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrderType_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrderType"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrderType_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrderTypeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrderType_InputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrderType"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrderType_OutputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrderTypeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllQueuesFiltered_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllQueuesFiltered"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllQueuesFiltered_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllQueuesFilteredResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetQueueById_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetQueueById"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetQueueById_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetQueueByIdResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetQueueByName_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetQueueByName"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetQueueByName_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetQueueByNameResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddQueue_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddQueue"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddQueue_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddQueueResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateQueue_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateQueue"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateQueue_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateQueueResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteQueue_InputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteQueue"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteQueue_OutputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteQueueResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetQueueMemberById_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetQueueMemberById"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetQueueMemberById_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetQueueMemberByIdResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddQueueMember_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddQueueMember"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddQueueMember_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddQueueMemberResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateQueueMember_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateQueueMember"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateQueueMember_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateQueueMemberResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteQueueMember_InputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteQueueMember"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteQueueMember_OutputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteQueueMemberResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllOrderExtraFieldsFiltered_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrderExtraFieldsFiltered"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetAllOrderExtraFieldsFiltered_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetAllOrderExtraFieldsFilteredResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderExtraFieldById_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderExtraFieldById"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderExtraFieldById_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderExtraFieldByIdResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderExtraFieldByName_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderExtraFieldByName"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_GetOrderExtraFieldByName_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetOrderExtraFieldByNameResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrderExtraField_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrderExtraField"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_AddOrderExtraField_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddOrderExtraFieldResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrderExtraField_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrderExtraField"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_UpdateOrderExtraField_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateOrderExtraFieldResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrderExtraField_InputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrderExtraField"/>
+    </wsdl:message>
+    <wsdl:message name="IOrdersService_DeleteOrderExtraField_OutputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteOrderExtraFieldResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="IOrdersService">
+        <wsdl:operation name="GetAllOrdersFiltered">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrdersFiltered"
+                        message="tns:IOrdersService_GetAllOrdersFiltered_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrdersFilteredResponse"
+                         message="tns:IOrdersService_GetAllOrdersFiltered_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderById">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetOrderById"
+                        message="tns:IOrdersService_GetOrderById_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetOrderByIdResponse"
+                         message="tns:IOrdersService_GetOrderById_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderByName">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetOrderByName"
+                        message="tns:IOrdersService_GetOrderByName_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetOrderByNameResponse"
+                         message="tns:IOrdersService_GetOrderByName_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrder">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/AddOrder"
+                        message="tns:IOrdersService_AddOrder_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/AddOrderResponse"
+                         message="tns:IOrdersService_AddOrder_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrder">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrder"
+                        message="tns:IOrdersService_UpdateOrder_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrderResponse"
+                         message="tns:IOrdersService_UpdateOrder_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrder">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrder"
+                        message="tns:IOrdersService_DeleteOrder_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrderResponse"
+                         message="tns:IOrdersService_DeleteOrder_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllOrderLoggingsFiltered">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrderLoggingsFiltered"
+                        message="tns:IOrdersService_GetAllOrderLoggingsFiltered_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrderLoggingsFilteredResponse"
+                         message="tns:IOrdersService_GetAllOrderLoggingsFiltered_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderLoggingById">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetOrderLoggingById"
+                        message="tns:IOrdersService_GetOrderLoggingById_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetOrderLoggingByIdResponse"
+                         message="tns:IOrdersService_GetOrderLoggingById_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrderLogging">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/AddOrderLogging"
+                        message="tns:IOrdersService_AddOrderLogging_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/AddOrderLoggingResponse"
+                         message="tns:IOrdersService_AddOrderLogging_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderLogging">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrderLogging"
+                        message="tns:IOrdersService_UpdateOrderLogging_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrderLoggingResponse"
+                         message="tns:IOrdersService_UpdateOrderLogging_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrderLogging">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrderLogging"
+                        message="tns:IOrdersService_DeleteOrderLogging_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrderLoggingResponse"
+                         message="tns:IOrdersService_DeleteOrderLogging_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllOrdersRelateFiltered">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrdersRelateFiltered"
+                        message="tns:IOrdersService_GetAllOrdersRelateFiltered_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrdersRelateFilteredResponse"
+                         message="tns:IOrdersService_GetAllOrdersRelateFiltered_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderRelateById">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetOrderRelateById"
+                        message="tns:IOrdersService_GetOrderRelateById_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetOrderRelateByIdResponse"
+                         message="tns:IOrdersService_GetOrderRelateById_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrderRelate">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/AddOrderRelate"
+                        message="tns:IOrdersService_AddOrderRelate_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/AddOrderRelateResponse"
+                         message="tns:IOrdersService_AddOrderRelate_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderRelate">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrderRelate"
+                        message="tns:IOrdersService_UpdateOrderRelate_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrderRelateResponse"
+                         message="tns:IOrdersService_UpdateOrderRelate_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrderRelate">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrderRelate"
+                        message="tns:IOrdersService_DeleteOrderRelate_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrderRelateResponse"
+                         message="tns:IOrdersService_DeleteOrderRelate_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllOrderTasksFiltered">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrderTasksFiltered"
+                        message="tns:IOrdersService_GetAllOrderTasksFiltered_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrderTasksFilteredResponse"
+                         message="tns:IOrdersService_GetAllOrderTasksFiltered_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderTaskById">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetOrderTaskById"
+                        message="tns:IOrdersService_GetOrderTaskById_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetOrderTaskByIdResponse"
+                         message="tns:IOrdersService_GetOrderTaskById_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderTaskByName">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetOrderTaskByName"
+                        message="tns:IOrdersService_GetOrderTaskByName_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetOrderTaskByNameResponse"
+                         message="tns:IOrdersService_GetOrderTaskByName_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrderTask">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/AddOrderTask"
+                        message="tns:IOrdersService_AddOrderTask_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/AddOrderTaskResponse"
+                         message="tns:IOrdersService_AddOrderTask_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderTask">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrderTask"
+                        message="tns:IOrdersService_UpdateOrderTask_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrderTaskResponse"
+                         message="tns:IOrdersService_UpdateOrderTask_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrderTask">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrderTask"
+                        message="tns:IOrdersService_DeleteOrderTask_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrderTaskResponse"
+                         message="tns:IOrdersService_DeleteOrderTask_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllOrderTypesFiltered">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrderTypesFiltered"
+                        message="tns:IOrdersService_GetAllOrderTypesFiltered_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrderTypesFilteredResponse"
+                         message="tns:IOrdersService_GetAllOrderTypesFiltered_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderTypeById">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetOrderTypeById"
+                        message="tns:IOrdersService_GetOrderTypeById_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetOrderTypeByIdResponse"
+                         message="tns:IOrdersService_GetOrderTypeById_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderTypeByName">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetOrderTypeByName"
+                        message="tns:IOrdersService_GetOrderTypeByName_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetOrderTypeByNameResponse"
+                         message="tns:IOrdersService_GetOrderTypeByName_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrderType">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/AddOrderType"
+                        message="tns:IOrdersService_AddOrderType_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/AddOrderTypeResponse"
+                         message="tns:IOrdersService_AddOrderType_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderType">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrderType"
+                        message="tns:IOrdersService_UpdateOrderType_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrderTypeResponse"
+                         message="tns:IOrdersService_UpdateOrderType_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrderType">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrderType"
+                        message="tns:IOrdersService_DeleteOrderType_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrderTypeResponse"
+                         message="tns:IOrdersService_DeleteOrderType_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllQueuesFiltered">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetAllQueuesFiltered"
+                        message="tns:IOrdersService_GetAllQueuesFiltered_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetAllQueuesFilteredResponse"
+                         message="tns:IOrdersService_GetAllQueuesFiltered_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetQueueById">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetQueueById"
+                        message="tns:IOrdersService_GetQueueById_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetQueueByIdResponse"
+                         message="tns:IOrdersService_GetQueueById_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetQueueByName">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetQueueByName"
+                        message="tns:IOrdersService_GetQueueByName_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetQueueByNameResponse"
+                         message="tns:IOrdersService_GetQueueByName_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddQueue">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/AddQueue"
+                        message="tns:IOrdersService_AddQueue_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/AddQueueResponse"
+                         message="tns:IOrdersService_AddQueue_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateQueue">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/UpdateQueue"
+                        message="tns:IOrdersService_UpdateQueue_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/UpdateQueueResponse"
+                         message="tns:IOrdersService_UpdateQueue_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteQueue">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/DeleteQueue"
+                        message="tns:IOrdersService_DeleteQueue_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/DeleteQueueResponse"
+                         message="tns:IOrdersService_DeleteQueue_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetQueueMemberById">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetQueueMemberById"
+                        message="tns:IOrdersService_GetQueueMemberById_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetQueueMemberByIdResponse"
+                         message="tns:IOrdersService_GetQueueMemberById_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddQueueMember">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/AddQueueMember"
+                        message="tns:IOrdersService_AddQueueMember_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/AddQueueMemberResponse"
+                         message="tns:IOrdersService_AddQueueMember_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateQueueMember">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/UpdateQueueMember"
+                        message="tns:IOrdersService_UpdateQueueMember_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/UpdateQueueMemberResponse"
+                         message="tns:IOrdersService_UpdateQueueMember_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteQueueMember">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/DeleteQueueMember"
+                        message="tns:IOrdersService_DeleteQueueMember_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/DeleteQueueMemberResponse"
+                         message="tns:IOrdersService_DeleteQueueMember_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllOrderExtraFieldsFiltered">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrderExtraFieldsFiltered"
+                        message="tns:IOrdersService_GetAllOrderExtraFieldsFiltered_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetAllOrderExtraFieldsFilteredResponse"
+                         message="tns:IOrdersService_GetAllOrderExtraFieldsFiltered_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderExtraFieldById">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetOrderExtraFieldById"
+                        message="tns:IOrdersService_GetOrderExtraFieldById_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetOrderExtraFieldByIdResponse"
+                         message="tns:IOrdersService_GetOrderExtraFieldById_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderExtraFieldByName">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/GetOrderExtraFieldByName"
+                        message="tns:IOrdersService_GetOrderExtraFieldByName_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/GetOrderExtraFieldByNameResponse"
+                         message="tns:IOrdersService_GetOrderExtraFieldByName_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrderExtraField">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/AddOrderExtraField"
+                        message="tns:IOrdersService_AddOrderExtraField_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/AddOrderExtraFieldResponse"
+                         message="tns:IOrdersService_AddOrderExtraField_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderExtraField">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrderExtraField"
+                        message="tns:IOrdersService_UpdateOrderExtraField_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/UpdateOrderExtraFieldResponse"
+                         message="tns:IOrdersService_UpdateOrderExtraField_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrderExtraField">
+            <wsdl:input wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrderExtraField"
+                        message="tns:IOrdersService_DeleteOrderExtraField_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IOrdersService/DeleteOrderExtraFieldResponse"
+                         message="tns:IOrdersService_DeleteOrderExtraField_OutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="BasicHttpBinding_IOrdersService" type="tns:IOrdersService">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetAllOrdersFiltered">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetAllOrdersFiltered" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderById">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetOrderById" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderByName">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetOrderByName" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrder">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/AddOrder" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrder">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/UpdateOrder" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrder">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/DeleteOrder" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllOrderLoggingsFiltered">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetAllOrderLoggingsFiltered"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderLoggingById">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetOrderLoggingById" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrderLogging">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/AddOrderLogging" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderLogging">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/UpdateOrderLogging" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrderLogging">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/DeleteOrderLogging" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllOrdersRelateFiltered">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetAllOrdersRelateFiltered" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderRelateById">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetOrderRelateById" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrderRelate">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/AddOrderRelate" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderRelate">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/UpdateOrderRelate" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrderRelate">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/DeleteOrderRelate" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllOrderTasksFiltered">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetAllOrderTasksFiltered" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderTaskById">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetOrderTaskById" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderTaskByName">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetOrderTaskByName" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrderTask">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/AddOrderTask" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderTask">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/UpdateOrderTask" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrderTask">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/DeleteOrderTask" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllOrderTypesFiltered">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetAllOrderTypesFiltered" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderTypeById">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetOrderTypeById" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderTypeByName">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetOrderTypeByName" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrderType">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/AddOrderType" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderType">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/UpdateOrderType" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrderType">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/DeleteOrderType" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllQueuesFiltered">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetAllQueuesFiltered" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetQueueById">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetQueueById" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetQueueByName">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetQueueByName" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddQueue">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/AddQueue" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateQueue">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/UpdateQueue" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteQueue">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/DeleteQueue" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetQueueMemberById">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetQueueMemberById" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddQueueMember">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/AddQueueMember" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateQueueMember">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/UpdateQueueMember" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteQueueMember">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/DeleteQueueMember" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetAllOrderExtraFieldsFiltered">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetAllOrderExtraFieldsFiltered"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderExtraFieldById">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetOrderExtraFieldById" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetOrderExtraFieldByName">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/GetOrderExtraFieldByName" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddOrderExtraField">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/AddOrderExtraField" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderExtraField">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/UpdateOrderExtraField" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteOrderExtraField">
+            <soap:operation soapAction="http://tempuri.org/IOrdersService/DeleteOrderExtraField" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="OrdersService">
+        <wsdl:port name="BasicHttpBinding_IOrdersService" binding="tns:BasicHttpBinding_IOrdersService">
+            <soap:address location="http://ims.surfnet.nl:8095/Orders/ordersHttp"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified"
+           targetNamespace="http://schemas.datacontract.org/2004/07/PresentationModel.DatabaseFilter"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://schemas.datacontract.org/2004/07/PresentationModel.DatabaseFilter">
+    <xs:complexType name="Filter">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Filters" nillable="true" type="tns:ArrayOfFilterField"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Filter" nillable="true" type="tns:Filter"/>
+    <xs:complexType name="ArrayOfFilterField">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="FilterField" nillable="true" type="tns:FilterField"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfFilterField" nillable="true" type="tns:ArrayOfFilterField"/>
+    <xs:complexType name="FilterField">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="SelectedOperator" type="tns:Operator"/>
+            <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="FilterField" nillable="true" type="tns:FilterField"/>
+    <xs:simpleType name="Operator">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="OperationEquals"/>
+            <xs:enumeration value="OperationNotEquals"/>
+            <xs:enumeration value="OperationIsNot"/>
+            <xs:enumeration value="OperationLike"/>
+            <xs:enumeration value="OperationNotLike"/>
+            <xs:enumeration value="OperationGreaterThan"/>
+            <xs:enumeration value="OperationSmallerThan"/>
+            <xs:enumeration value="OperationIsNull"/>
+            <xs:enumeration value="OperationIsNotNull"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="Operator" nillable="true" type="tns:Operator"/>
+    <xs:complexType name="Paginator">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Descending" type="xs:boolean"/>
+            <xs:element minOccurs="0" name="ElementsRead" type="xs:int"/>
+            <xs:element minOccurs="0" name="NumberOfElements" type="xs:int"/>
+            <xs:element minOccurs="0" name="OrderByProperty" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="StartElement" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Paginator" nillable="true" type="tns:Paginator"/>
+</xs:schema>
