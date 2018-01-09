@@ -1,0 +1,37 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body>
+        <GetProductByIdResponse xmlns="http://tempuri.org/">
+            <GetProductByIdResult z:Id="i1" xmlns:a="http://schemas.datacontract.org/2004/07/PresentationModel.Circuits"
+                                  xmlns:i="http://www.w3.org/2001/XMLSchema-instance"
+                                  xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+                <Errors i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/PresentationModel"/>
+                <HasErrors xmlns="http://schemas.datacontract.org/2004/07/PresentationModel">false</HasErrors>
+                <Id xmlns="http://schemas.datacontract.org/2004/07/PresentationModel">2001</Id>
+                <RowVersion xmlns="http://schemas.datacontract.org/2004/07/PresentationModel">2016-06-08T15:46:27
+                </RowVersion>
+                <a:AliasProduct/>
+                <a:Circuits i:nil="true"/>
+                <a:ColorValue xmlns:b="http://schemas.datacontract.org/2004/07/System.Drawing">
+                    <b:knownColor>0</b:knownColor>
+                    <b:name i:nil="true"/>
+                    <b:state>0</b:state>
+                    <b:value>0</b:value>
+                </a:ColorValue>
+                <a:ContId/>
+                <a:CreateSubCircuits/>
+                <a:Description>LP</a:Description>
+                <a:Domain i:nil="true" xmlns:b="http://schemas.datacontract.org/2004/07/PresentationModel.Domain"/>
+                <a:DomainId i:nil="true"/>
+                <a:FiberLossPerMeter i:nil="true"/>
+                <a:GroupId/>
+                <a:MaterialTypes i:nil="true"
+                                 xmlns:b="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/>
+                <a:Name>LP</a:Name>
+                <a:ProductLines>INFRA</a:ProductLines>
+                <a:Report>NO</a:Report>
+                <a:Speed i:nil="true"/>
+                <a:SpeedId i:nil="true"/>
+            </GetProductByIdResult>
+        </GetProductByIdResponse>
+    </s:Body>
+</s:Envelope>

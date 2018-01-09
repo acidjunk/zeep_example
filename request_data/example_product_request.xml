@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap-env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action>http://tempuri.org/IInventoryService/GetProductById</wsa:Action>
+        <wsa:MessageID>urn:uuid:fd5b688f-da60-4d42-801c-a03d29d73e8a</wsa:MessageID>
+        <wsa:To>http://ims.surfnet.nl:8095/Inventory/iInventoryHttp</wsa:To>
+    </soap-env:Header>
+    <soap-env:Body>
+        <ns0:GetProductById xmlns:ns0="http://tempuri.org/">
+            <ns0:id>2001</ns0:id>
+            <ns0:sessionToken>ad6ca831-5782-4d3d-9674-18cc1a9bee94</ns0:sessionToken>
+        </ns0:GetProductById>
+    </soap-env:Body>
+</soap-env:Envelope>

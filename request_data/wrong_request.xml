@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap-env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action>http://tempuri.org/IInventoryService/GetAllProductsFiltered</wsa:Action>
+        <wsa:MessageID>urn:uuid:60c2a065-1d94-4048-b41c-4dfc9c842c3e</wsa:MessageID>
+        <wsa:To>http://ims.surfnet.nl:8095/Inventory/iInventoryHttp</wsa:To>
+    </soap-env:Header>
+    <soap-env:Body>
+        <ns0:GetAllProductsFiltered xmlns:ns0="http://tempuri.org/">
+            <ns0:pager>
+                <ns1:Descending xmlns:ns1="http://schemas.datacontract.org/2004/07/PresentationModel.DatabaseFilter">
+                    false
+                </ns1:Descending>
+                <ns2:NumberOfElements
+                        xmlns:ns2="http://schemas.datacontract.org/2004/07/PresentationModel.DatabaseFilter">100
+                </ns2:NumberOfElements>
+                <ns3:StartElement xmlns:ns3="http://schemas.datacontract.org/2004/07/PresentationModel.DatabaseFilter">
+                    0
+                </ns3:StartElement>
+            </ns0:pager>
+            <ns0:filter>
+                <ns4:Filters xmlns:ns4="http://schemas.datacontract.org/2004/07/PresentationModel.DatabaseFilter">
+                    <ns4:FilterField>
+                        <ns4:Name>Name</ns4:Name>
+                        <ns4:SelectedOperator>OperationLike</ns4:SelectedOperator>
+                        <ns4:Value>LP</ns4:Value>
+                    </ns4:FilterField>
+                </ns4:Filters>
+            </ns0:filter>
+            <ns0:sessionToken>21dec2e7-1b9a-4f0a-b014-2c49e3c410dd</ns0:sessionToken>
+        </ns0:GetAllProductsFiltered>
+    </soap-env:Body>
+</soap-env:Envelope>

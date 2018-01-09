@@ -1,0 +1,45 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body>
+        <GetAllProductsFilteredResponse xmlns="http://tempuri.org/">
+            <GetAllProductsFilteredResult xmlns:a="http://schemas.datacontract.org/2004/07/PresentationModel.Circuits"
+                                          xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <a:Product z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+                    <Errors i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/PresentationModel"/>
+                    <HasErrors xmlns="http://schemas.datacontract.org/2004/07/PresentationModel">false</HasErrors>
+                    <Id xmlns="http://schemas.datacontract.org/2004/07/PresentationModel">2001</Id>
+                    <RowVersion xmlns="http://schemas.datacontract.org/2004/07/PresentationModel">2016-06-08T15:46:27</RowVersion>
+                    <a:AliasProduct/>
+                    <a:Circuits i:nil="true"/>
+                    <a:ColorValue xmlns:b="http://schemas.datacontract.org/2004/07/System.Drawing">
+                        <b:knownColor>0</b:knownColor>
+                        <b:name i:nil="true"/>
+                        <b:state>0</b:state>
+                        <b:value>0</b:value>
+                    </a:ColorValue>
+                    <a:ContId/>
+                    <a:CreateSubCircuits/>
+                    <a:Description>LP</a:Description>
+                    <a:Domain i:nil="true" xmlns:b="http://schemas.datacontract.org/2004/07/PresentationModel.Domain"/>
+                    <a:DomainId i:nil="true"/>
+                    <a:FiberLossPerMeter i:nil="true"/>
+                    <a:GroupId/>
+                    <a:MaterialTypes i:nil="true"
+                                     xmlns:b="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/>
+                    <a:Name>LP</a:Name>
+                    <a:ProductLines>INFRA</a:ProductLines>
+                    <a:Report>NO</a:Report>
+                    <a:Speed i:nil="true"/>
+                    <a:SpeedId i:nil="true"/>
+                </a:Product>
+            </GetAllProductsFilteredResult>
+            <pager xmlns:a="http://schemas.datacontract.org/2004/07/PresentationModel.DatabaseFilter"
+                   xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <a:Descending>false</a:Descending>
+                <a:ElementsRead>1</a:ElementsRead>
+                <a:NumberOfElements>100</a:NumberOfElements>
+                <a:OrderByProperty i:nil="true"/>
+                <a:StartElement>0</a:StartElement>
+            </pager>
+        </GetAllProductsFilteredResponse>
+    </s:Body>
+</s:Envelope>
