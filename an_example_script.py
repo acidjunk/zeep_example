@@ -49,7 +49,7 @@ pager = {"StartElement": 0, "Descending": False, "NumberOfElements": 10,
          "OrderByProperty": None}
 wrong = client.service.GetAllProductsFiltered(pager=pager, filter=filter, sessionToken=token)
 print(f'WRONG: {wrong}')
-sys.exit()
+# sys.exit()
 
 ### Correct search
 # Construct filter and pager for Name == 'LP'

@@ -1,1 +1,800 @@
-<?xml version="1.0" encoding="utf-8"?><xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PresentationModel.EquipmentDefinition" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/PresentationModel.EquipmentDefinition"><xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/PresentationModel"/><xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/><xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/><xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/><xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/PresentationModel.RadioAccessNetwork"/><xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Domain"/><xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Circuits"/><xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Site"/><xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Relation"/><xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Customer"/><xs:complexType name="InterfaceDefinition"><xs:complexContent mixed="false"><xs:extension base="q1:BaseObject" xmlns:q1="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Optical" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="PortTemplates" nillable="true" type="tns:ArrayOfPortTemplate"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="InterfaceDefinition" nillable="true" type="tns:InterfaceDefinition"/><xs:complexType name="ArrayOfPortTemplate"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="PortTemplate" nillable="true" type="tns:PortTemplate"/></xs:sequence></xs:complexType><xs:element name="ArrayOfPortTemplate" nillable="true" type="tns:ArrayOfPortTemplate"/><xs:complexType name="PortTemplate"><xs:complexContent mixed="false"><xs:extension base="q2:BaseObject" xmlns:q2="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="CardCodeDefinition" nillable="true" type="tns:CardCodeDefinition"/><xs:element minOccurs="0" name="CardCodeDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/><xs:element minOccurs="0" name="CardDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="CardPosition" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ConnectorLoss" nillable="true" type="xs:double"/><xs:element minOccurs="0" name="CreateReceiver" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="CreateTransmitter" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/><xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ExtraText" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="InterfaceDefinition" nillable="true" type="tns:InterfaceDefinition"/><xs:element minOccurs="0" name="InterfaceDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="NumberOfPorts" type="xs:int"/><xs:element minOccurs="0" name="Ports" nillable="true" type="q3:ArrayOfPort" xmlns:q3="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/><xs:element minOccurs="0" name="ReconcilePortTemplates" nillable="true" type="q4:ArrayOfReconcilePortTemplate" xmlns:q4="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/><xs:element minOccurs="0" name="SequenceNumber" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ShelfDefinition" nillable="true" type="tns:ShelfDefinition"/><xs:element minOccurs="0" name="ShelfDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Speed" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="StartPort" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="VendorElectricalOptical" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="VendorFrequency" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="VendorLongShort" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="VendorSpeed" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="X" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Y" nillable="true" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="PortTemplate" nillable="true" type="tns:PortTemplate"/><xs:complexType name="CardCodeDefinition"><xs:complexContent mixed="false"><xs:extension base="q5:BaseObject" xmlns:q5="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="CardCodePicture" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="CardCodesPerSlots" nillable="true" type="tns:ArrayOfCardCodePerSlot"/><xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/><xs:element minOccurs="0" name="CardDefinitionId" type="xs:int"/><xs:element minOccurs="0" name="Cards" nillable="true" type="q6:ArrayOfCard" xmlns:q6="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/><xs:element minOccurs="0" name="EndOfLive" nillable="true" type="xs:dateTime"/><xs:element minOccurs="0" name="EndOfMainContract" nillable="true" type="xs:dateTime"/><xs:element minOccurs="0" name="EndOfSale" nillable="true" type="xs:dateTime"/><xs:element minOccurs="0" name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/><xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="HeatProduction" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Height" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="InternalPortTemplates" nillable="true" type="tns:ArrayOfInternalPortTemplate"/><xs:element minOccurs="0" name="MaterialTypes" nillable="true" type="q7:ArrayOfMaterialType" xmlns:q7="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="NodeTemplates" nillable="true" type="tns:ArrayOfNodeTemplate"/><xs:element minOccurs="0" name="PartOfMaintContract" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PortTemplates" nillable="true" type="tns:ArrayOfPortTemplate"/><xs:element minOccurs="0" name="PowerConsume" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ReconcileCardCodeDefinitions" nillable="true" type="q8:ArrayOfReconcileCardCodeDefinition" xmlns:q8="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/><xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:Vendor"/><xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Width" nillable="true" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="CardCodeDefinition" nillable="true" type="tns:CardCodeDefinition"/><xs:complexType name="ArrayOfCardCodePerSlot"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="CardCodePerSlot" nillable="true" type="tns:CardCodePerSlot"/></xs:sequence></xs:complexType><xs:element name="ArrayOfCardCodePerSlot" nillable="true" type="tns:ArrayOfCardCodePerSlot"/><xs:complexType name="CardCodePerSlot"><xs:complexContent mixed="false"><xs:extension base="q9:BaseObject" xmlns:q9="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="CardCodeDefinition" nillable="true" type="tns:CardCodeDefinition"/><xs:element minOccurs="0" name="CardCodeDefinitionId" type="xs:int"/><xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/><xs:element minOccurs="0" name="CardDefinitionId" type="xs:int"/><xs:element minOccurs="0" name="ReconcileCardCodePerSlots" nillable="true" type="q10:ArrayOfReconcileCardCodePerSlot" xmlns:q10="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/><xs:element minOccurs="0" name="SlotDefinition" nillable="true" type="tns:SlotDefinition"/><xs:element minOccurs="0" name="SlotDefinitionId" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="CardCodePerSlot" nillable="true" type="tns:CardCodePerSlot"/><xs:complexType name="CardDefinition"><xs:complexContent mixed="false"><xs:extension base="q11:BaseObject" xmlns:q11="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="AntennaBeamTypes" nillable="true" type="q12:ArrayOfAntennaBeamType" xmlns:q12="http://schemas.datacontract.org/2004/07/PresentationModel.RadioAccessNetwork"/><xs:element minOccurs="0" name="CardARelations" nillable="true" type="tns:ArrayOfCardRelation"/><xs:element minOccurs="0" name="CardBRelations" nillable="true" type="tns:ArrayOfCardRelation"/><xs:element minOccurs="0" name="CardCodeDefinitions" nillable="true" type="tns:ArrayOfCardCodeDefinition"/><xs:element minOccurs="0" name="CardCodesPerSlot" nillable="true" type="tns:ArrayOfCardCodePerSlot"/><xs:element minOccurs="0" name="CardPicture" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Cards" nillable="true" type="q13:ArrayOfCard" xmlns:q13="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/><xs:element minOccurs="0" name="CardsPerSlots" nillable="true" type="tns:ArrayOfCardPerSlot"/><xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="EndOfLife" nillable="true" type="xs:dateTime"/><xs:element minOccurs="0" name="EndOfMainContract" nillable="true" type="xs:dateTime"/><xs:element minOccurs="0" name="EndOfSale" nillable="true" type="xs:dateTime"/><xs:element minOccurs="0" name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/><xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="HTextAlign" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="HeatProduction" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Height" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="InternalPortTemplates" nillable="true" type="tns:ArrayOfInternalPortTemplate"/><xs:element minOccurs="0" name="MaterialTypes" nillable="true" type="q14:ArrayOfMaterialType" xmlns:q14="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/><xs:element minOccurs="0" name="MaxFilling" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="MaxVc12Filling" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="MaxVc3Filling" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="MaxVc4Filling" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="NodeTemplates" nillable="true" type="tns:ArrayOfNodeTemplate"/><xs:element minOccurs="0" name="OldNew" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PartOfMaintenanceContract" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PortTemplates" nillable="true" type="tns:ArrayOfPortTemplate"/><xs:element minOccurs="0" name="PowerConsume" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ReconcileCardDefinitions" nillable="true" type="q15:ArrayOfReconcileCardDefinition" xmlns:q15="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/><xs:element minOccurs="0" name="ShowCardName" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Timing" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="VTextAlign" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Width" nillable="true" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="CardDefinition" nillable="true" type="tns:CardDefinition"/><xs:complexType name="ArrayOfCardRelation"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="CardRelation" nillable="true" type="tns:CardRelation"/></xs:sequence></xs:complexType><xs:element name="ArrayOfCardRelation" nillable="true" type="tns:ArrayOfCardRelation"/><xs:complexType name="CardRelation"><xs:complexContent mixed="false"><xs:extension base="q16:BaseObject" xmlns:q16="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="CardADefinition" nillable="true" type="tns:CardDefinition"/><xs:element minOccurs="0" name="CardADefinitionId" type="xs:int"/><xs:element minOccurs="0" name="CardBDefinition" nillable="true" type="tns:CardDefinition"/><xs:element minOccurs="0" name="CardBDefinitionId" type="xs:int"/><xs:element minOccurs="0" name="SlotADefinition" nillable="true" type="tns:SlotDefinition"/><xs:element minOccurs="0" name="SlotADefinitionId" type="xs:int"/><xs:element minOccurs="0" name="SlotBDefinition" nillable="true" type="tns:SlotDefinition"/><xs:element minOccurs="0" name="SlotBDefinitionId" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="CardRelation" nillable="true" type="tns:CardRelation"/><xs:complexType name="SlotDefinition"><xs:complexContent mixed="false"><xs:extension base="q17:BaseObject" xmlns:q17="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="CardARelations" nillable="true" type="tns:ArrayOfCardRelation"/><xs:element minOccurs="0" name="CardBRelations" nillable="true" type="tns:ArrayOfCardRelation"/><xs:element minOccurs="0" name="CardCodesPerSlot" nillable="true" type="tns:ArrayOfCardCodePerSlot"/><xs:element minOccurs="0" name="CardName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="CardNameXPosition" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Cards" nillable="true" type="q18:ArrayOfCard" xmlns:q18="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/><xs:element minOccurs="0" name="CardsPerSlot" nillable="true" type="tns:ArrayOfCardPerSlot"/><xs:element minOccurs="0" name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/><xs:element minOccurs="0" name="EquipmentDefinitionId" type="xs:int"/><xs:element minOccurs="0" name="ForcedNoPort" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ForcedNoScale" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Height" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="NameXPosition" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ProtectionSlot" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ReconcileSlotDefinitions" nillable="true" type="q19:ArrayOfReconcileSlotDefinition" xmlns:q19="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/><xs:element minOccurs="0" name="SequenceNumber" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ShelfDefinition" nillable="true" type="tns:ShelfDefinition"/><xs:element minOccurs="0" name="ShelfDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="SlotInReport" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SlotRecordNumber" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Width" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="XPosition" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="YPosition" nillable="true" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="SlotDefinition" nillable="true" type="tns:SlotDefinition"/><xs:complexType name="EquipmentDefinition"><xs:complexContent mixed="false"><xs:extension base="q20:BaseObject" xmlns:q20="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="CardCodeDefinitions" nillable="true" type="tns:ArrayOfCardCodeDefinition"/><xs:element minOccurs="0" name="CardDefinitions" nillable="true" type="tns:ArrayOfCardDefinition"/><xs:element minOccurs="0" name="ContractId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="DefPhysSpeeds" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="DefaultAngle" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="DefaultLayer" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="DefaultManagementSystem" nillable="true" type="tns:ManagementSystem"/><xs:element minOccurs="0" name="DefaultManagementSystemId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="DefaultRange" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="DepreciationPeriod" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Depth" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Domain" nillable="true" type="q21:Domain" xmlns:q21="http://schemas.datacontract.org/2004/07/PresentationModel.Domain"/><xs:element minOccurs="0" name="DomainId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="EndOfLive" nillable="true" type="xs:dateTime"/><xs:element minOccurs="0" name="EndOfMainContract" nillable="true" type="xs:dateTime"/><xs:element minOccurs="0" name="EndOfSale" nillable="true" type="xs:dateTime"/><xs:element minOccurs="0" name="EquipmentKind" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="EquipmentPicture" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ExtraInfo" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="HasSwPort" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="HeatProduction" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Height" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="InternalPortTemplates" nillable="true" type="tns:ArrayOfInternalPortTemplate"/><xs:element minOccurs="0" name="IsIpType" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Klm" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="MaterialTypes" nillable="true" type="q22:ArrayOfMaterialType" xmlns:q22="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="NodeNameTemplate" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="NodeTemplates" nillable="true" type="tns:ArrayOfNodeTemplate"/><xs:element minOccurs="0" name="Nodes" nillable="true" type="q23:ArrayOfNode" xmlns:q23="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/><xs:element minOccurs="0" name="OwnerRules" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="PartOfMaintContract" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PlatformName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PortTemplates" nillable="true" type="tns:ArrayOfPortTemplate"/><xs:element minOccurs="0" name="PowerConsume" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="RangeFrom" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="RangeTo" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ReconcileEquipmentDefinitions" nillable="true" type="q24:ArrayOfReconcileEquipmentDefinition" xmlns:q24="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/><xs:element minOccurs="0" name="RedundantType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Shape" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ShapeColor" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ShapeText" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ShelfDefinitions" nillable="true" type="tns:ArrayOfShelfDefinition"/><xs:element minOccurs="0" name="SlotDefinitions" nillable="true" type="tns:ArrayOfSlotDefinition"/><xs:element minOccurs="0" name="Templates" nillable="true" type="tns:ArrayOfTemplate"/><xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:Vendor"/><xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Width" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="_Height" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="_Width" nillable="true" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/><xs:complexType name="ArrayOfCardCodeDefinition"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="CardCodeDefinition" nillable="true" type="tns:CardCodeDefinition"/></xs:sequence></xs:complexType><xs:element name="ArrayOfCardCodeDefinition" nillable="true" type="tns:ArrayOfCardCodeDefinition"/><xs:complexType name="ArrayOfCardDefinition"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="CardDefinition" nillable="true" type="tns:CardDefinition"/></xs:sequence></xs:complexType><xs:element name="ArrayOfCardDefinition" nillable="true" type="tns:ArrayOfCardDefinition"/><xs:complexType name="ManagementSystem"><xs:complexContent mixed="false"><xs:extension base="q25:BaseObject" xmlns:q25="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="NetworkAddress" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Nodes" nillable="true" type="q26:ArrayOfNode" xmlns:q26="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/><xs:element minOccurs="0" name="ReconcileSchemaName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:Vendor"/><xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="ManagementSystem" nillable="true" type="tns:ManagementSystem"/><xs:complexType name="Vendor"><xs:complexContent mixed="false"><xs:extension base="q27:BaseObject" xmlns:q27="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="CableTypes" nillable="true" type="q28:ArrayOfCableType" xmlns:q28="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/><xs:element minOccurs="0" name="CardCodes" nillable="true" type="tns:ArrayOfCardCodeDefinition"/><xs:element minOccurs="0" name="Color" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="EquipmentDefinitions" nillable="true" type="tns:ArrayOfEquipmentDefinition"/><xs:element minOccurs="0" name="EscalationDescription" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="InternetAddress" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="LinkSla" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ManagementSystems" nillable="true" type="tns:ArrayOfManagementSystem"/><xs:element minOccurs="0" name="MasterAccount" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="OloProducts" nillable="true" type="q29:ArrayOfOloProduct" xmlns:q29="http://schemas.datacontract.org/2004/07/PresentationModel.Circuits"/><xs:element minOccurs="0" name="SlaDescription" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SlaMainTimeToRepair" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SlaOnSite" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SpareOwner" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="StockContact" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="StockLocation" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="VendorMaterialTypes" nillable="true" type="q30:ArrayOfVendorMaterialType" xmlns:q30="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/><xs:element minOccurs="0" name="VendorRelatedContacts" nillable="true" type="tns:ArrayOfVendorRelatedContact"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="Vendor" nillable="true" type="tns:Vendor"/><xs:complexType name="RackDefinition"><xs:complexContent mixed="false"><xs:extension base="q31:BaseObject" xmlns:q31="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="DefaultRackMode" type="xs:int"/><xs:element minOccurs="0" name="Depth" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Drawing" nillable="true" type="q32:Drawing" xmlns:q32="http://schemas.datacontract.org/2004/07/PresentationModel.Site"/><xs:element minOccurs="0" name="DrawingId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Height" type="xs:int"/><xs:element minOccurs="0" name="MaterialTypes" nillable="true" type="q33:ArrayOfMaterialType" xmlns:q33="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Racks" nillable="true" type="q34:ArrayOfRack" xmlns:q34="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/><xs:element minOccurs="0" name="Width" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="RackDefinition" nillable="true" type="tns:RackDefinition"/><xs:complexType name="ShelfDefinition"><xs:complexContent mixed="false"><xs:extension base="q35:BaseObject" xmlns:q35="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="AntennaTypeNameMappings" nillable="true" type="q36:ArrayOfAntennaTypeNameMapping" xmlns:q36="http://schemas.datacontract.org/2004/07/PresentationModel.RadioAccessNetwork"/><xs:element minOccurs="0" name="AntennaTypes" nillable="true" type="q37:ArrayOfAntennaType" xmlns:q37="http://schemas.datacontract.org/2004/07/PresentationModel.RadioAccessNetwork"/><xs:element minOccurs="0" name="DepreciationPeriod" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Depth" type="xs:int"/><xs:element minOccurs="0" name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/><xs:element minOccurs="0" name="EquipmentDefinitionId" type="xs:int"/><xs:element minOccurs="0" name="HeatProduction" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Height" type="xs:int"/><xs:element minOccurs="0" name="InternalPortTemplates" nillable="true" type="tns:ArrayOfInternalPortTemplate"/><xs:element minOccurs="0" name="MaterialTypes" nillable="true" type="q38:ArrayOfMaterialType" xmlns:q38="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="NodeTemplates" nillable="true" type="tns:ArrayOfNodeTemplate"/><xs:element minOccurs="0" name="PortTemplates" nillable="true" type="tns:ArrayOfPortTemplate"/><xs:element minOccurs="0" name="PowerConsume" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ReconcileShelfDefinitions" nillable="true" type="q39:ArrayOfReconcileShelfDefinition" xmlns:q39="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/><xs:element minOccurs="0" name="SequenceNumber" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ShelfPicture" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Shelves" nillable="true" type="q40:ArrayOfShelf" xmlns:q40="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/><xs:element minOccurs="0" name="SlotDefinitions" nillable="true" type="tns:ArrayOfSlotDefinition"/><xs:element minOccurs="0" name="Width" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="ShelfDefinition" nillable="true" type="tns:ShelfDefinition"/><xs:complexType name="ArrayOfInternalPortTemplate"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="InternalPortTemplate" nillable="true" type="tns:InternalPortTemplate"/></xs:sequence></xs:complexType><xs:element name="ArrayOfInternalPortTemplate" nillable="true" type="tns:ArrayOfInternalPortTemplate"/><xs:complexType name="InternalPortTemplate"><xs:complexContent mixed="false"><xs:extension base="q41:BaseObject" xmlns:q41="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="CardCodeDefinition" nillable="true" type="tns:CardCodeDefinition"/><xs:element minOccurs="0" name="CardCodeDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/><xs:element minOccurs="0" name="CardDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="CreateReceiver" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="CreateTransmitter" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/><xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ExtraText" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="InternalPorts" nillable="true" type="q42:ArrayOfInternalPort" xmlns:q42="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="NumberOfInternalPorts" type="xs:int"/><xs:element minOccurs="0" name="ReconcileInternalPortTemplates" nillable="true" type="q43:ArrayOfReconcileInternalPortTemplate" xmlns:q43="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/><xs:element minOccurs="0" name="RepeatSequence" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ShelfDefinition" nillable="true" type="tns:ShelfDefinition"/><xs:element minOccurs="0" name="ShelfDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Speed" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="StartInternalPort" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="InternalPortTemplate" nillable="true" type="tns:InternalPortTemplate"/><xs:complexType name="CardPerSlot"><xs:complexContent mixed="false"><xs:extension base="q44:BaseObject" xmlns:q44="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/><xs:element minOccurs="0" name="CardDefinitionId" type="xs:int"/><xs:element minOccurs="0" name="CardTurn180" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ProtectionCardSlot" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ReconcileCardPerSlots" nillable="true" type="q45:ArrayOfReconcileCardPerSlot" xmlns:q45="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/><xs:element minOccurs="0" name="SlotDefinition" nillable="true" type="tns:SlotDefinition"/><xs:element minOccurs="0" name="SlotDefinitionId" type="xs:int"/><xs:element minOccurs="0" name="SlotPositionFree" nillable="true" type="xs:string"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="CardPerSlot" nillable="true" type="tns:CardPerSlot"/><xs:complexType name="ArrayOfNodeTemplate"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="NodeTemplate" nillable="true" type="tns:NodeTemplate"/></xs:sequence></xs:complexType><xs:element name="ArrayOfNodeTemplate" nillable="true" type="tns:ArrayOfNodeTemplate"/><xs:complexType name="NodeTemplate"><xs:complexContent mixed="false"><xs:extension base="q46:BaseObject" xmlns:q46="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="CardCodeDefinition" nillable="true" type="tns:CardCodeDefinition"/><xs:element minOccurs="0" name="CardCodeDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/><xs:element minOccurs="0" name="CardDefinitionId" type="xs:int"/><xs:element minOccurs="0" name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/><xs:element minOccurs="0" name="EquipmentDefinitionId" type="xs:int"/><xs:element minOccurs="0" name="ParentId" type="xs:int"/><xs:element minOccurs="0" name="ShelfDefinition" nillable="true" type="tns:ShelfDefinition"/><xs:element minOccurs="0" name="ShelfDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ShelfName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SlotNumber" type="xs:int"/><xs:element minOccurs="0" name="Template" nillable="true" type="tns:Template"/><xs:element minOccurs="0" name="TemplateId" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="NodeTemplate" nillable="true" type="tns:NodeTemplate"/><xs:complexType name="Template"><xs:complexContent mixed="false"><xs:extension base="q47:BaseObject" xmlns:q47="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime"/><xs:element minOccurs="0" name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/><xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="NodeTemplates" nillable="true" type="tns:ArrayOfNodeTemplate"/><xs:element minOccurs="0" name="SiteTemplateRelations" nillable="true" type="q48:ArrayOfSiteTemplateRelation" xmlns:q48="http://schemas.datacontract.org/2004/07/PresentationModel.Relation"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="Template" nillable="true" type="tns:Template"/><xs:complexType name="ArrayOfSlotDefinition"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="SlotDefinition" nillable="true" type="tns:SlotDefinition"/></xs:sequence></xs:complexType><xs:element name="ArrayOfSlotDefinition" nillable="true" type="tns:ArrayOfSlotDefinition"/><xs:complexType name="ArrayOfEquipmentDefinition"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/></xs:sequence></xs:complexType><xs:element name="ArrayOfEquipmentDefinition" nillable="true" type="tns:ArrayOfEquipmentDefinition"/><xs:complexType name="ArrayOfManagementSystem"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="ManagementSystem" nillable="true" type="tns:ManagementSystem"/></xs:sequence></xs:complexType><xs:element name="ArrayOfManagementSystem" nillable="true" type="tns:ArrayOfManagementSystem"/><xs:complexType name="ArrayOfVendorRelatedContact"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="VendorRelatedContact" nillable="true" type="tns:VendorRelatedContact"/></xs:sequence></xs:complexType><xs:element name="ArrayOfVendorRelatedContact" nillable="true" type="tns:ArrayOfVendorRelatedContact"/><xs:complexType name="VendorRelatedContact"><xs:complexContent mixed="false"><xs:extension base="q49:BaseObject" xmlns:q49="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="Contact" nillable="true" type="q50:Contact" xmlns:q50="http://schemas.datacontract.org/2004/07/PresentationModel.Customer"/><xs:element minOccurs="0" name="ContactId" type="xs:int"/><xs:element minOccurs="0" name="MainTypeId" type="xs:int"/><xs:element minOccurs="0" name="RelateTypeId" type="xs:int"/><xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:Vendor"/><xs:element minOccurs="0" name="VendorId" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="VendorRelatedContact" nillable="true" type="tns:VendorRelatedContact"/><xs:complexType name="ArrayOfShelfDefinition"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="ShelfDefinition" nillable="true" type="tns:ShelfDefinition"/></xs:sequence></xs:complexType><xs:element name="ArrayOfShelfDefinition" nillable="true" type="tns:ArrayOfShelfDefinition"/><xs:complexType name="ArrayOfTemplate"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="Template" nillable="true" type="tns:Template"/></xs:sequence></xs:complexType><xs:element name="ArrayOfTemplate" nillable="true" type="tns:ArrayOfTemplate"/><xs:complexType name="ManagementSystemInterface"><xs:complexContent mixed="false"><xs:extension base="q51:BaseObject" xmlns:q51="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="LoaderType" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="ManagementSystem" nillable="true" type="tns:ManagementSystem"/><xs:element minOccurs="0" name="ManagementSystemId" type="xs:int"/><xs:element minOccurs="0" name="PortNumber" type="xs:int"/><xs:element minOccurs="0" name="Type" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="ManagementSystemInterface" nillable="true" type="tns:ManagementSystemInterface"/><xs:complexType name="ArrayOfCardPerSlot"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="CardPerSlot" nillable="true" type="tns:CardPerSlot"/></xs:sequence></xs:complexType><xs:element name="ArrayOfCardPerSlot" nillable="true" type="tns:ArrayOfCardPerSlot"/><xs:complexType name="ArrayOfEquipmentDelay"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="EquipmentDelay" nillable="true" type="tns:EquipmentDelay"/></xs:sequence></xs:complexType><xs:element name="ArrayOfEquipmentDelay" nillable="true" type="tns:ArrayOfEquipmentDelay"/><xs:complexType name="EquipmentDelay"><xs:complexContent mixed="false"><xs:extension base="q52:BaseObject" xmlns:q52="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="EqDelay" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/><xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Speed" nillable="true" type="q53:Speed" xmlns:q53="http://schemas.datacontract.org/2004/07/PresentationModel.Circuits"/><xs:element minOccurs="0" name="SpeedId" nillable="true" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="EquipmentDelay" nillable="true" type="tns:EquipmentDelay"/><xs:complexType name="ArrayOfScriptLine"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="ScriptLine" nillable="true" type="tns:ScriptLine"/></xs:sequence></xs:complexType><xs:element name="ArrayOfScriptLine" nillable="true" type="tns:ArrayOfScriptLine"/><xs:complexType name="ScriptLine"><xs:complexContent mixed="false"><xs:extension base="q54:BaseObject" xmlns:q54="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="Command" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Ignore" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Sequence" nillable="true" type="xs:int"/><xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="ScriptLine" nillable="true" type="tns:ScriptLine"/><xs:complexType name="ArrayOfManagementSystemInterface"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="ManagementSystemInterface" nillable="true" type="tns:ManagementSystemInterface"/></xs:sequence></xs:complexType><xs:element name="ArrayOfManagementSystemInterface" nillable="true" type="tns:ArrayOfManagementSystemInterface"/><xs:complexType name="ArrayOfVendorRelatedGroup"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="VendorRelatedGroup" nillable="true" type="tns:VendorRelatedGroup"/></xs:sequence></xs:complexType><xs:element name="ArrayOfVendorRelatedGroup" nillable="true" type="tns:ArrayOfVendorRelatedGroup"/><xs:complexType name="VendorRelatedGroup"><xs:complexContent mixed="false"><xs:extension base="q55:BaseObject" xmlns:q55="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="Group" nillable="true" type="q56:ContactGroup" xmlns:q56="http://schemas.datacontract.org/2004/07/PresentationModel.Customer"/><xs:element minOccurs="0" name="GroupId" type="xs:int"/><xs:element minOccurs="0" name="MainTypeId" type="xs:int"/><xs:element minOccurs="0" name="RelateTypeId" type="xs:int"/><xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:Vendor"/><xs:element minOccurs="0" name="VendorId" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="VendorRelatedGroup" nillable="true" type="tns:VendorRelatedGroup"/><xs:complexType name="ArrayOfLoaderCommand"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="LoaderCommand" nillable="true" type="tns:LoaderCommand"/></xs:sequence></xs:complexType><xs:element name="ArrayOfLoaderCommand" nillable="true" type="tns:ArrayOfLoaderCommand"/><xs:complexType name="LoaderCommand"><xs:complexContent mixed="false"><xs:extension base="q57:BaseObject" xmlns:q57="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="Command" nillable="true" type="xs:string"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="LoaderCommand" nillable="true" type="tns:LoaderCommand"/><xs:complexType name="ArrayOfManagementSystemCommands"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="ManagementSystemCommands" nillable="true" type="tns:ManagementSystemCommands"/></xs:sequence></xs:complexType><xs:element name="ArrayOfManagementSystemCommands" nillable="true" type="tns:ArrayOfManagementSystemCommands"/><xs:complexType name="ManagementSystemCommands"><xs:complexContent mixed="false"><xs:extension base="q58:BaseObject" xmlns:q58="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="Command" nillable="true" type="tns:LoaderCommand"/><xs:element minOccurs="0" name="CommandId" type="xs:int"/><xs:element minOccurs="0" name="ManagementSystem" nillable="true" type="tns:ManagementSystem"/><xs:element minOccurs="0" name="ManagementSystemId" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="ManagementSystemCommands" nillable="true" type="tns:ManagementSystemCommands"/><xs:complexType name="ArrayOfEquipmentDefinitionCommands"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="EquipmentDefinitionCommands" nillable="true" type="tns:EquipmentDefinitionCommands"/></xs:sequence></xs:complexType><xs:element name="ArrayOfEquipmentDefinitionCommands" nillable="true" type="tns:ArrayOfEquipmentDefinitionCommands"/><xs:complexType name="EquipmentDefinitionCommands"><xs:complexContent mixed="false"><xs:extension base="q59:BaseObject" xmlns:q59="http://schemas.datacontract.org/2004/07/PresentationModel"><xs:sequence><xs:element minOccurs="0" name="Command" nillable="true" type="tns:LoaderCommand"/><xs:element minOccurs="0" name="CommandId" type="xs:int"/><xs:element minOccurs="0" name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/><xs:element minOccurs="0" name="EquipmentDefinitionId" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:element name="EquipmentDefinitionCommands" nillable="true" type="tns:EquipmentDefinitionCommands"/><xs:complexType name="ArrayOfVendor"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="Vendor" nillable="true" type="tns:Vendor"/></xs:sequence></xs:complexType><xs:element name="ArrayOfVendor" nillable="true" type="tns:ArrayOfVendor"/><xs:complexType name="ArrayOfInterfaceDefinition"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="InterfaceDefinition" nillable="true" type="tns:InterfaceDefinition"/></xs:sequence></xs:complexType><xs:element name="ArrayOfInterfaceDefinition" nillable="true" type="tns:ArrayOfInterfaceDefinition"/><xs:complexType name="ArrayOfRackDefinition"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded" name="RackDefinition" nillable="true" type="tns:RackDefinition"/></xs:sequence></xs:complexType><xs:element name="ArrayOfRackDefinition" nillable="true" type="tns:ArrayOfRackDefinition"/></xs:schema>
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified"
+           targetNamespace="http://schemas.datacontract.org/2004/07/PresentationModel.EquipmentDefinition"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://schemas.datacontract.org/2004/07/PresentationModel.EquipmentDefinition">
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd5"
+               namespace="http://schemas.datacontract.org/2004/07/PresentationModel"/>
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd8"
+               namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/>
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd18"
+               namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/>
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd15"
+               namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/>
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd7"
+               namespace="http://schemas.datacontract.org/2004/07/PresentationModel.RadioAccessNetwork"/>
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd12"
+               namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Domain"/>
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd6"
+               namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Circuits"/>
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd4"
+               namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Site"/>
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd21"
+               namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Relation"/>
+    <xs:import schemaLocation="http://ims.surfnet.nl:8095/Inventory?xsd=xsd14"
+               namespace="http://schemas.datacontract.org/2004/07/PresentationModel.Customer"/>
+    <xs:complexType name="InterfaceDefinition">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q1:BaseObject" xmlns:q1="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Optical" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="PortTemplates" nillable="true" type="tns:ArrayOfPortTemplate"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="InterfaceDefinition" nillable="true" type="tns:InterfaceDefinition"/>
+    <xs:complexType name="ArrayOfPortTemplate">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="PortTemplate" nillable="true"
+                        type="tns:PortTemplate"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfPortTemplate" nillable="true" type="tns:ArrayOfPortTemplate"/>
+    <xs:complexType name="PortTemplate">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q2:BaseObject" xmlns:q2="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CardCodeDefinition" nillable="true" type="tns:CardCodeDefinition"/>
+                    <xs:element minOccurs="0" name="CardCodeDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/>
+                    <xs:element minOccurs="0" name="CardDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="CardPosition" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ConnectorLoss" nillable="true" type="xs:double"/>
+                    <xs:element minOccurs="0" name="CreateReceiver" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CreateTransmitter" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinition" nillable="true"
+                                type="tns:EquipmentDefinition"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ExtraText" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="InterfaceDefinition" nillable="true"
+                                type="tns:InterfaceDefinition"/>
+                    <xs:element minOccurs="0" name="InterfaceDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NumberOfPorts" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Ports" nillable="true" type="q3:ArrayOfPort"
+                                xmlns:q3="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/>
+                    <xs:element minOccurs="0" name="ReconcilePortTemplates" nillable="true"
+                                type="q4:ArrayOfReconcilePortTemplate"
+                                xmlns:q4="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/>
+                    <xs:element minOccurs="0" name="SequenceNumber" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ShelfDefinition" nillable="true" type="tns:ShelfDefinition"/>
+                    <xs:element minOccurs="0" name="ShelfDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Speed" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="StartPort" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="VendorElectricalOptical" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="VendorFrequency" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="VendorLongShort" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="VendorSpeed" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="X" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Y" nillable="true" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="PortTemplate" nillable="true" type="tns:PortTemplate"/>
+    <xs:complexType name="CardCodeDefinition">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q5:BaseObject" xmlns:q5="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CardCodePicture" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CardCodesPerSlots" nillable="true"
+                                type="tns:ArrayOfCardCodePerSlot"/>
+                    <xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/>
+                    <xs:element minOccurs="0" name="CardDefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Cards" nillable="true" type="q6:ArrayOfCard"
+                                xmlns:q6="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/>
+                    <xs:element minOccurs="0" name="EndOfLive" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="EndOfMainContract" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="EndOfSale" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinition" nillable="true"
+                                type="tns:EquipmentDefinition"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="HeatProduction" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="InternalPortTemplates" nillable="true"
+                                type="tns:ArrayOfInternalPortTemplate"/>
+                    <xs:element minOccurs="0" name="MaterialTypes" nillable="true" type="q7:ArrayOfMaterialType"
+                                xmlns:q7="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NodeTemplates" nillable="true" type="tns:ArrayOfNodeTemplate"/>
+                    <xs:element minOccurs="0" name="PartOfMaintContract" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PortTemplates" nillable="true" type="tns:ArrayOfPortTemplate"/>
+                    <xs:element minOccurs="0" name="PowerConsume" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ReconcileCardCodeDefinitions" nillable="true"
+                                type="q8:ArrayOfReconcileCardCodeDefinition"
+                                xmlns:q8="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/>
+                    <xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:Vendor"/>
+                    <xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="CardCodeDefinition" nillable="true" type="tns:CardCodeDefinition"/>
+    <xs:complexType name="ArrayOfCardCodePerSlot">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="CardCodePerSlot" nillable="true"
+                        type="tns:CardCodePerSlot"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfCardCodePerSlot" nillable="true" type="tns:ArrayOfCardCodePerSlot"/>
+    <xs:complexType name="CardCodePerSlot">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q9:BaseObject" xmlns:q9="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CardCodeDefinition" nillable="true" type="tns:CardCodeDefinition"/>
+                    <xs:element minOccurs="0" name="CardCodeDefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/>
+                    <xs:element minOccurs="0" name="CardDefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ReconcileCardCodePerSlots" nillable="true"
+                                type="q10:ArrayOfReconcileCardCodePerSlot"
+                                xmlns:q10="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/>
+                    <xs:element minOccurs="0" name="SlotDefinition" nillable="true" type="tns:SlotDefinition"/>
+                    <xs:element minOccurs="0" name="SlotDefinitionId" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="CardCodePerSlot" nillable="true" type="tns:CardCodePerSlot"/>
+    <xs:complexType name="CardDefinition">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q11:BaseObject" xmlns:q11="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="AntennaBeamTypes" nillable="true" type="q12:ArrayOfAntennaBeamType"
+                                xmlns:q12="http://schemas.datacontract.org/2004/07/PresentationModel.RadioAccessNetwork"/>
+                    <xs:element minOccurs="0" name="CardARelations" nillable="true" type="tns:ArrayOfCardRelation"/>
+                    <xs:element minOccurs="0" name="CardBRelations" nillable="true" type="tns:ArrayOfCardRelation"/>
+                    <xs:element minOccurs="0" name="CardCodeDefinitions" nillable="true"
+                                type="tns:ArrayOfCardCodeDefinition"/>
+                    <xs:element minOccurs="0" name="CardCodesPerSlot" nillable="true"
+                                type="tns:ArrayOfCardCodePerSlot"/>
+                    <xs:element minOccurs="0" name="CardPicture" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Cards" nillable="true" type="q13:ArrayOfCard"
+                                xmlns:q13="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/>
+                    <xs:element minOccurs="0" name="CardsPerSlots" nillable="true" type="tns:ArrayOfCardPerSlot"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="EndOfLife" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="EndOfMainContract" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="EndOfSale" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinition" nillable="true"
+                                type="tns:EquipmentDefinition"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="HTextAlign" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="HeatProduction" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="InternalPortTemplates" nillable="true"
+                                type="tns:ArrayOfInternalPortTemplate"/>
+                    <xs:element minOccurs="0" name="MaterialTypes" nillable="true" type="q14:ArrayOfMaterialType"
+                                xmlns:q14="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/>
+                    <xs:element minOccurs="0" name="MaxFilling" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="MaxVc12Filling" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="MaxVc3Filling" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="MaxVc4Filling" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NodeTemplates" nillable="true" type="tns:ArrayOfNodeTemplate"/>
+                    <xs:element minOccurs="0" name="OldNew" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PartOfMaintenanceContract" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PortTemplates" nillable="true" type="tns:ArrayOfPortTemplate"/>
+                    <xs:element minOccurs="0" name="PowerConsume" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ReconcileCardDefinitions" nillable="true"
+                                type="q15:ArrayOfReconcileCardDefinition"
+                                xmlns:q15="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/>
+                    <xs:element minOccurs="0" name="ShowCardName" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Timing" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="VTextAlign" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="CardDefinition" nillable="true" type="tns:CardDefinition"/>
+    <xs:complexType name="ArrayOfCardRelation">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="CardRelation" nillable="true"
+                        type="tns:CardRelation"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfCardRelation" nillable="true" type="tns:ArrayOfCardRelation"/>
+    <xs:complexType name="CardRelation">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q16:BaseObject" xmlns:q16="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CardADefinition" nillable="true" type="tns:CardDefinition"/>
+                    <xs:element minOccurs="0" name="CardADefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="CardBDefinition" nillable="true" type="tns:CardDefinition"/>
+                    <xs:element minOccurs="0" name="CardBDefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="SlotADefinition" nillable="true" type="tns:SlotDefinition"/>
+                    <xs:element minOccurs="0" name="SlotADefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="SlotBDefinition" nillable="true" type="tns:SlotDefinition"/>
+                    <xs:element minOccurs="0" name="SlotBDefinitionId" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="CardRelation" nillable="true" type="tns:CardRelation"/>
+    <xs:complexType name="SlotDefinition">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q17:BaseObject" xmlns:q17="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CardARelations" nillable="true" type="tns:ArrayOfCardRelation"/>
+                    <xs:element minOccurs="0" name="CardBRelations" nillable="true" type="tns:ArrayOfCardRelation"/>
+                    <xs:element minOccurs="0" name="CardCodesPerSlot" nillable="true"
+                                type="tns:ArrayOfCardCodePerSlot"/>
+                    <xs:element minOccurs="0" name="CardName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CardNameXPosition" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Cards" nillable="true" type="q18:ArrayOfCard"
+                                xmlns:q18="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/>
+                    <xs:element minOccurs="0" name="CardsPerSlot" nillable="true" type="tns:ArrayOfCardPerSlot"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinition" nillable="true"
+                                type="tns:EquipmentDefinition"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ForcedNoPort" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ForcedNoScale" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NameXPosition" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ProtectionSlot" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ReconcileSlotDefinitions" nillable="true"
+                                type="q19:ArrayOfReconcileSlotDefinition"
+                                xmlns:q19="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/>
+                    <xs:element minOccurs="0" name="SequenceNumber" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ShelfDefinition" nillable="true" type="tns:ShelfDefinition"/>
+                    <xs:element minOccurs="0" name="ShelfDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="SlotInReport" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="SlotRecordNumber" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="XPosition" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="YPosition" nillable="true" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="SlotDefinition" nillable="true" type="tns:SlotDefinition"/>
+    <xs:complexType name="EquipmentDefinition">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q20:BaseObject" xmlns:q20="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CardCodeDefinitions" nillable="true"
+                                type="tns:ArrayOfCardCodeDefinition"/>
+                    <xs:element minOccurs="0" name="CardDefinitions" nillable="true" type="tns:ArrayOfCardDefinition"/>
+                    <xs:element minOccurs="0" name="ContractId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="DefPhysSpeeds" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DefaultAngle" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="DefaultLayer" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DefaultManagementSystem" nillable="true"
+                                type="tns:ManagementSystem"/>
+                    <xs:element minOccurs="0" name="DefaultManagementSystemId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="DefaultRange" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="DepreciationPeriod" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Depth" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Domain" nillable="true" type="q21:Domain"
+                                xmlns:q21="http://schemas.datacontract.org/2004/07/PresentationModel.Domain"/>
+                    <xs:element minOccurs="0" name="DomainId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="EndOfLive" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="EndOfMainContract" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="EndOfSale" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="EquipmentKind" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="EquipmentPicture" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ExtraInfo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="HasSwPort" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="HeatProduction" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="InternalPortTemplates" nillable="true"
+                                type="tns:ArrayOfInternalPortTemplate"/>
+                    <xs:element minOccurs="0" name="IsIpType" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Klm" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="MaterialTypes" nillable="true" type="q22:ArrayOfMaterialType"
+                                xmlns:q22="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NodeNameTemplate" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NodeTemplates" nillable="true" type="tns:ArrayOfNodeTemplate"/>
+                    <xs:element minOccurs="0" name="Nodes" nillable="true" type="q23:ArrayOfNode"
+                                xmlns:q23="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/>
+                    <xs:element minOccurs="0" name="OwnerRules" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="PartOfMaintContract" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PlatformName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PortTemplates" nillable="true" type="tns:ArrayOfPortTemplate"/>
+                    <xs:element minOccurs="0" name="PowerConsume" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="RangeFrom" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="RangeTo" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ReconcileEquipmentDefinitions" nillable="true"
+                                type="q24:ArrayOfReconcileEquipmentDefinition"
+                                xmlns:q24="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/>
+                    <xs:element minOccurs="0" name="RedundantType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Shape" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ShapeColor" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ShapeText" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ShelfDefinitions" nillable="true"
+                                type="tns:ArrayOfShelfDefinition"/>
+                    <xs:element minOccurs="0" name="SlotDefinitions" nillable="true" type="tns:ArrayOfSlotDefinition"/>
+                    <xs:element minOccurs="0" name="Templates" nillable="true" type="tns:ArrayOfTemplate"/>
+                    <xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:Vendor"/>
+                    <xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="_Height" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="_Width" nillable="true" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="EquipmentDefinition" nillable="true" type="tns:EquipmentDefinition"/>
+    <xs:complexType name="ArrayOfCardCodeDefinition">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="CardCodeDefinition" nillable="true"
+                        type="tns:CardCodeDefinition"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfCardCodeDefinition" nillable="true" type="tns:ArrayOfCardCodeDefinition"/>
+    <xs:complexType name="ArrayOfCardDefinition">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="CardDefinition" nillable="true"
+                        type="tns:CardDefinition"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfCardDefinition" nillable="true" type="tns:ArrayOfCardDefinition"/>
+    <xs:complexType name="ManagementSystem">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q25:BaseObject" xmlns:q25="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NetworkAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Nodes" nillable="true" type="q26:ArrayOfNode"
+                                xmlns:q26="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/>
+                    <xs:element minOccurs="0" name="ReconcileSchemaName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:Vendor"/>
+                    <xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ManagementSystem" nillable="true" type="tns:ManagementSystem"/>
+    <xs:complexType name="Vendor">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q27:BaseObject" xmlns:q27="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CableTypes" nillable="true" type="q28:ArrayOfCableType"
+                                xmlns:q28="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/>
+                    <xs:element minOccurs="0" name="CardCodes" nillable="true" type="tns:ArrayOfCardCodeDefinition"/>
+                    <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinitions" nillable="true"
+                                type="tns:ArrayOfEquipmentDefinition"/>
+                    <xs:element minOccurs="0" name="EscalationDescription" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="InternetAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="LinkSla" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ManagementSystems" nillable="true"
+                                type="tns:ArrayOfManagementSystem"/>
+                    <xs:element minOccurs="0" name="MasterAccount" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="OloProducts" nillable="true" type="q29:ArrayOfOloProduct"
+                                xmlns:q29="http://schemas.datacontract.org/2004/07/PresentationModel.Circuits"/>
+                    <xs:element minOccurs="0" name="SlaDescription" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="SlaMainTimeToRepair" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="SlaOnSite" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="SpareOwner" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="StockContact" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="StockLocation" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="VendorMaterialTypes" nillable="true"
+                                type="q30:ArrayOfVendorMaterialType"
+                                xmlns:q30="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/>
+                    <xs:element minOccurs="0" name="VendorRelatedContacts" nillable="true"
+                                type="tns:ArrayOfVendorRelatedContact"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="Vendor" nillable="true" type="tns:Vendor"/>
+    <xs:complexType name="RackDefinition">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q31:BaseObject" xmlns:q31="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DefaultRackMode" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Depth" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Drawing" nillable="true" type="q32:Drawing"
+                                xmlns:q32="http://schemas.datacontract.org/2004/07/PresentationModel.Site"/>
+                    <xs:element minOccurs="0" name="DrawingId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Height" type="xs:int"/>
+                    <xs:element minOccurs="0" name="MaterialTypes" nillable="true" type="q33:ArrayOfMaterialType"
+                                xmlns:q33="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Racks" nillable="true" type="q34:ArrayOfRack"
+                                xmlns:q34="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/>
+                    <xs:element minOccurs="0" name="Width" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="RackDefinition" nillable="true" type="tns:RackDefinition"/>
+    <xs:complexType name="ShelfDefinition">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q35:BaseObject" xmlns:q35="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="AntennaTypeNameMappings" nillable="true"
+                                type="q36:ArrayOfAntennaTypeNameMapping"
+                                xmlns:q36="http://schemas.datacontract.org/2004/07/PresentationModel.RadioAccessNetwork"/>
+                    <xs:element minOccurs="0" name="AntennaTypes" nillable="true" type="q37:ArrayOfAntennaType"
+                                xmlns:q37="http://schemas.datacontract.org/2004/07/PresentationModel.RadioAccessNetwork"/>
+                    <xs:element minOccurs="0" name="DepreciationPeriod" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Depth" type="xs:int"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinition" nillable="true"
+                                type="tns:EquipmentDefinition"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="HeatProduction" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Height" type="xs:int"/>
+                    <xs:element minOccurs="0" name="InternalPortTemplates" nillable="true"
+                                type="tns:ArrayOfInternalPortTemplate"/>
+                    <xs:element minOccurs="0" name="MaterialTypes" nillable="true" type="q38:ArrayOfMaterialType"
+                                xmlns:q38="http://schemas.datacontract.org/2004/07/PresentationModel.Warehouse"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NodeTemplates" nillable="true" type="tns:ArrayOfNodeTemplate"/>
+                    <xs:element minOccurs="0" name="PortTemplates" nillable="true" type="tns:ArrayOfPortTemplate"/>
+                    <xs:element minOccurs="0" name="PowerConsume" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ReconcileShelfDefinitions" nillable="true"
+                                type="q39:ArrayOfReconcileShelfDefinition"
+                                xmlns:q39="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/>
+                    <xs:element minOccurs="0" name="SequenceNumber" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ShelfPicture" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Shelves" nillable="true" type="q40:ArrayOfShelf"
+                                xmlns:q40="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/>
+                    <xs:element minOccurs="0" name="SlotDefinitions" nillable="true" type="tns:ArrayOfSlotDefinition"/>
+                    <xs:element minOccurs="0" name="Width" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ShelfDefinition" nillable="true" type="tns:ShelfDefinition"/>
+    <xs:complexType name="ArrayOfInternalPortTemplate">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="InternalPortTemplate" nillable="true"
+                        type="tns:InternalPortTemplate"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfInternalPortTemplate" nillable="true" type="tns:ArrayOfInternalPortTemplate"/>
+    <xs:complexType name="InternalPortTemplate">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q41:BaseObject" xmlns:q41="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CardCodeDefinition" nillable="true" type="tns:CardCodeDefinition"/>
+                    <xs:element minOccurs="0" name="CardCodeDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/>
+                    <xs:element minOccurs="0" name="CardDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="CreateReceiver" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CreateTransmitter" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinition" nillable="true"
+                                type="tns:EquipmentDefinition"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ExtraText" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="InternalPorts" nillable="true" type="q42:ArrayOfInternalPort"
+                                xmlns:q42="http://schemas.datacontract.org/2004/07/PresentationModel.Equipment"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NumberOfInternalPorts" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ReconcileInternalPortTemplates" nillable="true"
+                                type="q43:ArrayOfReconcileInternalPortTemplate"
+                                xmlns:q43="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/>
+                    <xs:element minOccurs="0" name="RepeatSequence" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ShelfDefinition" nillable="true" type="tns:ShelfDefinition"/>
+                    <xs:element minOccurs="0" name="ShelfDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Speed" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="StartInternalPort" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="InternalPortTemplate" nillable="true" type="tns:InternalPortTemplate"/>
+    <xs:complexType name="CardPerSlot">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q44:BaseObject" xmlns:q44="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/>
+                    <xs:element minOccurs="0" name="CardDefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="CardTurn180" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ProtectionCardSlot" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ReconcileCardPerSlots" nillable="true"
+                                type="q45:ArrayOfReconcileCardPerSlot"
+                                xmlns:q45="http://schemas.datacontract.org/2004/07/PresentationModel.Reconcile"/>
+                    <xs:element minOccurs="0" name="SlotDefinition" nillable="true" type="tns:SlotDefinition"/>
+                    <xs:element minOccurs="0" name="SlotDefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="SlotPositionFree" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="CardPerSlot" nillable="true" type="tns:CardPerSlot"/>
+    <xs:complexType name="ArrayOfNodeTemplate">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="NodeTemplate" nillable="true"
+                        type="tns:NodeTemplate"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfNodeTemplate" nillable="true" type="tns:ArrayOfNodeTemplate"/>
+    <xs:complexType name="NodeTemplate">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q46:BaseObject" xmlns:q46="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CardCodeDefinition" nillable="true" type="tns:CardCodeDefinition"/>
+                    <xs:element minOccurs="0" name="CardCodeDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="CardDefinition" nillable="true" type="tns:CardDefinition"/>
+                    <xs:element minOccurs="0" name="CardDefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinition" nillable="true"
+                                type="tns:EquipmentDefinition"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinitionId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ParentId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ShelfDefinition" nillable="true" type="tns:ShelfDefinition"/>
+                    <xs:element minOccurs="0" name="ShelfDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ShelfName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="SlotNumber" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Template" nillable="true" type="tns:Template"/>
+                    <xs:element minOccurs="0" name="TemplateId" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="NodeTemplate" nillable="true" type="tns:NodeTemplate"/>
+    <xs:complexType name="Template">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q47:BaseObject" xmlns:q47="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinition" nillable="true"
+                                type="tns:EquipmentDefinition"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NodeTemplates" nillable="true" type="tns:ArrayOfNodeTemplate"/>
+                    <xs:element minOccurs="0" name="SiteTemplateRelations" nillable="true"
+                                type="q48:ArrayOfSiteTemplateRelation"
+                                xmlns:q48="http://schemas.datacontract.org/2004/07/PresentationModel.Relation"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="Template" nillable="true" type="tns:Template"/>
+    <xs:complexType name="ArrayOfSlotDefinition">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="SlotDefinition" nillable="true"
+                        type="tns:SlotDefinition"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfSlotDefinition" nillable="true" type="tns:ArrayOfSlotDefinition"/>
+    <xs:complexType name="ArrayOfEquipmentDefinition">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="EquipmentDefinition" nillable="true"
+                        type="tns:EquipmentDefinition"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfEquipmentDefinition" nillable="true" type="tns:ArrayOfEquipmentDefinition"/>
+    <xs:complexType name="ArrayOfManagementSystem">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="ManagementSystem" nillable="true"
+                        type="tns:ManagementSystem"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfManagementSystem" nillable="true" type="tns:ArrayOfManagementSystem"/>
+    <xs:complexType name="ArrayOfVendorRelatedContact">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="VendorRelatedContact" nillable="true"
+                        type="tns:VendorRelatedContact"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfVendorRelatedContact" nillable="true" type="tns:ArrayOfVendorRelatedContact"/>
+    <xs:complexType name="VendorRelatedContact">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q49:BaseObject" xmlns:q49="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Contact" nillable="true" type="q50:Contact"
+                                xmlns:q50="http://schemas.datacontract.org/2004/07/PresentationModel.Customer"/>
+                    <xs:element minOccurs="0" name="ContactId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="MainTypeId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="RelateTypeId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:Vendor"/>
+                    <xs:element minOccurs="0" name="VendorId" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="VendorRelatedContact" nillable="true" type="tns:VendorRelatedContact"/>
+    <xs:complexType name="ArrayOfShelfDefinition">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="ShelfDefinition" nillable="true"
+                        type="tns:ShelfDefinition"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfShelfDefinition" nillable="true" type="tns:ArrayOfShelfDefinition"/>
+    <xs:complexType name="ArrayOfTemplate">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Template" nillable="true" type="tns:Template"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfTemplate" nillable="true" type="tns:ArrayOfTemplate"/>
+    <xs:complexType name="ManagementSystemInterface">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q51:BaseObject" xmlns:q51="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="LoaderType" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ManagementSystem" nillable="true" type="tns:ManagementSystem"/>
+                    <xs:element minOccurs="0" name="ManagementSystemId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="PortNumber" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Type" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ManagementSystemInterface" nillable="true" type="tns:ManagementSystemInterface"/>
+    <xs:complexType name="ArrayOfCardPerSlot">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="CardPerSlot" nillable="true" type="tns:CardPerSlot"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfCardPerSlot" nillable="true" type="tns:ArrayOfCardPerSlot"/>
+    <xs:complexType name="ArrayOfEquipmentDelay">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="EquipmentDelay" nillable="true"
+                        type="tns:EquipmentDelay"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfEquipmentDelay" nillable="true" type="tns:ArrayOfEquipmentDelay"/>
+    <xs:complexType name="EquipmentDelay">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q52:BaseObject" xmlns:q52="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="EqDelay" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinition" nillable="true"
+                                type="tns:EquipmentDefinition"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinitionId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Speed" nillable="true" type="q53:Speed"
+                                xmlns:q53="http://schemas.datacontract.org/2004/07/PresentationModel.Circuits"/>
+                    <xs:element minOccurs="0" name="SpeedId" nillable="true" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="EquipmentDelay" nillable="true" type="tns:EquipmentDelay"/>
+    <xs:complexType name="ArrayOfScriptLine">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="ScriptLine" nillable="true" type="tns:ScriptLine"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfScriptLine" nillable="true" type="tns:ArrayOfScriptLine"/>
+    <xs:complexType name="ScriptLine">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q54:BaseObject" xmlns:q54="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Command" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Ignore" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Sequence" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ScriptLine" nillable="true" type="tns:ScriptLine"/>
+    <xs:complexType name="ArrayOfManagementSystemInterface">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="ManagementSystemInterface" nillable="true"
+                        type="tns:ManagementSystemInterface"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfManagementSystemInterface" nillable="true" type="tns:ArrayOfManagementSystemInterface"/>
+    <xs:complexType name="ArrayOfVendorRelatedGroup">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="VendorRelatedGroup" nillable="true"
+                        type="tns:VendorRelatedGroup"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfVendorRelatedGroup" nillable="true" type="tns:ArrayOfVendorRelatedGroup"/>
+    <xs:complexType name="VendorRelatedGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q55:BaseObject" xmlns:q55="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Group" nillable="true" type="q56:ContactGroup"
+                                xmlns:q56="http://schemas.datacontract.org/2004/07/PresentationModel.Customer"/>
+                    <xs:element minOccurs="0" name="GroupId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="MainTypeId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="RelateTypeId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:Vendor"/>
+                    <xs:element minOccurs="0" name="VendorId" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="VendorRelatedGroup" nillable="true" type="tns:VendorRelatedGroup"/>
+    <xs:complexType name="ArrayOfLoaderCommand">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="LoaderCommand" nillable="true"
+                        type="tns:LoaderCommand"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfLoaderCommand" nillable="true" type="tns:ArrayOfLoaderCommand"/>
+    <xs:complexType name="LoaderCommand">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q57:BaseObject" xmlns:q57="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Command" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="LoaderCommand" nillable="true" type="tns:LoaderCommand"/>
+    <xs:complexType name="ArrayOfManagementSystemCommands">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="ManagementSystemCommands" nillable="true"
+                        type="tns:ManagementSystemCommands"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfManagementSystemCommands" nillable="true" type="tns:ArrayOfManagementSystemCommands"/>
+    <xs:complexType name="ManagementSystemCommands">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q58:BaseObject" xmlns:q58="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Command" nillable="true" type="tns:LoaderCommand"/>
+                    <xs:element minOccurs="0" name="CommandId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ManagementSystem" nillable="true" type="tns:ManagementSystem"/>
+                    <xs:element minOccurs="0" name="ManagementSystemId" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ManagementSystemCommands" nillable="true" type="tns:ManagementSystemCommands"/>
+    <xs:complexType name="ArrayOfEquipmentDefinitionCommands">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="EquipmentDefinitionCommands" nillable="true"
+                        type="tns:EquipmentDefinitionCommands"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfEquipmentDefinitionCommands" nillable="true"
+                type="tns:ArrayOfEquipmentDefinitionCommands"/>
+    <xs:complexType name="EquipmentDefinitionCommands">
+        <xs:complexContent mixed="false">
+            <xs:extension base="q59:BaseObject" xmlns:q59="http://schemas.datacontract.org/2004/07/PresentationModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Command" nillable="true" type="tns:LoaderCommand"/>
+                    <xs:element minOccurs="0" name="CommandId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinition" nillable="true"
+                                type="tns:EquipmentDefinition"/>
+                    <xs:element minOccurs="0" name="EquipmentDefinitionId" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="EquipmentDefinitionCommands" nillable="true" type="tns:EquipmentDefinitionCommands"/>
+    <xs:complexType name="ArrayOfVendor">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Vendor" nillable="true" type="tns:Vendor"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfVendor" nillable="true" type="tns:ArrayOfVendor"/>
+    <xs:complexType name="ArrayOfInterfaceDefinition">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="InterfaceDefinition" nillable="true"
+                        type="tns:InterfaceDefinition"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfInterfaceDefinition" nillable="true" type="tns:ArrayOfInterfaceDefinition"/>
+    <xs:complexType name="ArrayOfRackDefinition">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="RackDefinition" nillable="true"
+                        type="tns:RackDefinition"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfRackDefinition" nillable="true" type="tns:ArrayOfRackDefinition"/>
+</xs:schema>

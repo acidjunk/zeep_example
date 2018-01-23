@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ns0="http://schemas.datacontract.org/2004/07/PresentationModel.DatabaseFilter"
+                   xmlns:ns1="http://tempuri.org/" xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <SOAP-ENV:Header/>
+    <ns2:Body>
+        <ns1:GetAllProductsFiltered>
+            <ns1:pager>
+                <ns0:NumberOfElements>100</ns0:NumberOfElements>
+                <ns0:StartElement>0</ns0:StartElement>
+            </ns1:pager>
+            <ns1:filter>
+                <ns0:Filters>
+                    <ns0:FilterField>
+                        <ns0:Name>Name</ns0:Name>
+                        <ns0:SelectedOperator>OperationEquals</ns0:SelectedOperator>
+                        <ns0:Value xsi:type="xsd:string">LP</ns0:Value>
+                    </ns0:FilterField>
+                </ns0:Filters>
+            </ns1:filter>
+            <ns1:sessionToken>d566bcee-2b63-480d-9d66-fa040694b71f</ns1:sessionToken>
+        </ns1:GetAllProductsFiltered>
+    </ns2:Body>
+</SOAP-ENV:Envelope>
